@@ -1,0 +1,12 @@
+{
+  "name": "our_community_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Евгений С <evskorobogatij@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.5.0",
+    "toastr": "^2.1.4"
+  }
+}
