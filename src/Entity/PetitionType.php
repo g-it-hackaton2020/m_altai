@@ -36,6 +36,11 @@ class PetitionType
      */
     private $initiatives;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $code_type;
+
     public function __construct()
     {
         $this->id = Uuid::uuid4();
@@ -126,6 +131,18 @@ class PetitionType
                 $initiative->setInitiativeType(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCodeType(): ?int
+    {
+        return $this->code_type;
+    }
+
+    public function setCodeType(int $code_type): self
+    {
+        $this->code_type = $code_type;
 
         return $this;
     }
