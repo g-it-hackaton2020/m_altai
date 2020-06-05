@@ -1,0 +1,43 @@
+imports:
+  - { resource: easy_admin/ }
+
+#easy_admin:
+#    entities:
+#        People:
+#            class: App\Entity\People
+#            label: 'Люди'
+#            form:
+#                title: 'Новый человек'
+#                fields:
+#                    - { property : 'fam', label : 'Фамилия'}
+#                    - { property : 'im', label : 'Имя' }
+#                    - { property : 'ot',label : 'Отчество'}
+#                    - { property : 'birth_date', label : 'Дата рождения', type_options: { widget: 'single_text' }}
+#                    - property : 'sex'
+#                      label : 'Пол'
+#                      type: choice
+#                      type_options:
+#                          choices:
+#                              'Женский': false
+#                              'Мужской': true
+#                    - { property : 'email', type: 'email', label: 'E-mail' }
+#                    - { property : 'address', label : 'Адресc'}
+#                edit:
+#                    title: 'Редактирование'
+
+#        CommunityGroup:
+#            class: App\Entity\CommunityGroup
+#            label: 'Сообщества'
+#            form:
+#                fields:
+#                    - { property : 'community_name', label : 'Название сообщества' }
+#                    - { property : 'description', label : 'Описание' }
+#                    - { property : 'lead', label : 'Лидер'}
+#                    - { property : 'peoples', label : '',type: embedded_list}
+
+
+        # List the entity class name you want to manage
+#        Pe
+#        - App\Entity\People
+#        - App\Entity\CommunityGroup
+#        - App\Entity\User

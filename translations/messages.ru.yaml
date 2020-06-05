@@ -1,0 +1,43 @@
+admin:
+  menu:
+    people: Люди
+    community_group: Сообщества
+  title:
+    new:
+      people: 'Новый человек'
+      community_group: 'Новое сообщество'
+      petition: 'Обращение'
+      initiative: Инициативы
+  button:
+    new: Создать
+    edit: Редактировать
+    delete: Удалить
+  label:
+    people: Люди
+    community_group: Сообщества
+    petitions: 'Обращения'
+    initiatives: Инициативы
+  fields:
+    id: 'ID'
+    fam: 'Фамилия'
+    im: 'Имя'
+    ot: 'Отчество'
+    birth_date: 'Дата рождения'
+    sex: 'Пол'
+    address: 'Адрес'
+    email: 'e-mail'
+    description: 'Описание'
+    community_name: 'Название сообщества'
+    lead: 'Лидер'
+    peoples: 'Люди'
+    created_at: 'Создано'
+    updated_at: 'Обновлено'
+    petition_name: 'Наименование обращения'
+    initiative_name: 'Наименование инициативы'
+    petition_type: 'Тип обращения'
+    autor: 'Автор'
+    signers: 'Подписанты'
+  values:
+    sex:
+      men : 'Мужской'
+      women : 'Женский'

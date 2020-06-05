@@ -1,0 +1,21 @@
+easy_admin:
+    entities:
+      CommunityGroup:
+        class: App\Entity\CommunityGroup
+        label: 'admin.label.community_group'
+        list:
+          sort: 'updatedAt'
+          fields:
+            - { property: 'community_name', label: 'admin.fields.community_name' }
+            - { property: 'description', label: 'admin.fields.description' }
+            - { property: 'lead', label: 'admin.fields.lead'}
+            - { property: 'peoples', label: 'admin.fields.peoples'  }
+            - { property: 'createdAt', label: 'admin.fields.created_at'}
+            - { property: 'updatedAt', label: 'admin.fields.updated_at'}
+        form:
+          title: 'admin.title.new.community_group'
+          fields:
+            - { property: 'community_name', label: 'admin.fields.community_name' }
+            - { property: 'description', label: 'admin.fields.description' }
+            - { property: 'lead', label: 'admin.fields.lead'}
+            - { property: 'peoples', label: '',type: embedded_list}

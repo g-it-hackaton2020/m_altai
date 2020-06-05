@@ -1,0 +1,33 @@
+easy_admin:
+  entities:
+    People:
+      class: App\Entity\People
+      label: 'admin.label.people'
+      list:
+        sort: 'updatedAt'
+        fields:
+          - { property: 'fam', label: 'admin.fields.fam'}
+          - { property: 'im', label: 'admin.fields.im' }
+          - { property: 'ot',label: 'admin.fields.ot'}
+          - { property : 'birth_date', label : 'admin.fields.birth_date'}
+          - { property : 'sex', label : 'admin.fields.sex' }
+          - { property : 'createdAt', label : 'admin.fields.created_at'}
+          - { property : 'updatedAt', label : 'admin.fields.updated_at'}
+      form:
+        title: 'admin.title.new.people'
+        fields:
+          - { property : 'fam', label : 'admin.fields.fam'}
+          - { property : 'im', label : 'admin.fields.im' }
+          - { property : 'ot',label : 'admin.fields.ot'}
+          - { property : 'birth_date', label : 'admin.fields.birth_date', type_options: { widget: 'single_text' }}
+          - property : 'sex'
+            label : 'admin.fields.sex'
+            type: choice
+            type_options:
+              choices:
+                'admin.values.sex.women': false
+                'admin.values.sex.men': true
+          - { property : 'email', type: 'email', label: 'admin.fields.email' }
+          - { property : 'address', label : 'admin.fields.address'}
+        edit:
+          title: 'Редактирование'

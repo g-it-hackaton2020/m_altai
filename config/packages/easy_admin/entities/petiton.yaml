@@ -1,0 +1,31 @@
+easy_admin:
+  entities:
+    Petition:
+      class: App\Entity\Petition
+      label: 'admin.label.petitions'
+      list:
+        sort: 'updatedAt'
+        fields:
+          - { property: 'name', label: 'admin.fields.petition_name'}
+          - { property: 'description', label: 'admin.fields.description' }
+          - { property: 'petition_type', label: 'admin.fields.petition_type'}
+          - { property: 'autor', label: 'admin.fields.autor' }
+          - { property: 'signers', label: 'admin.fields.signers' }
+          - { property: 'createdAt', label: 'admin.fields.created_at' }
+          - { property : 'updatedAt', label : 'admin.fields.updated_at'}
+      form:
+        fields:
+          - { property: 'id', label: 'admin.fields.id', type_options: { disabled: true } }
+          - { property: 'name', label: 'admin.fields.petition_name'}
+          - { property: 'description', label: 'admin.fields.description' }
+          - { property: 'petition_type', label: 'admin.fields.petition_type'}
+          - { property: 'autor', label: 'admin.fields.autor' }
+          - { property: 'signers', label: 'admin.fields.signers' }
+          - { property: 'createdAt', label: 'admin.fields.created_at', type_options: { widget: 'single_text', required: false, disabled: true } }
+          - { property: 'updatedAt', label: 'admin.fields.updated_at', type_options: { widget: 'single_text', required: false, disabled: true } }
+        new:
+          title: 'admin.title.new.petition'
+          fields:
+            - '-id'
+            - '-createdAt'
+            - '-updatedAt'

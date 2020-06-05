@@ -1,0 +1,16 @@
+easy_admin:
+  site_name: 'Мой Алтай'
+  design:
+    menu:
+      - { entity: 'People', label : 'admin.menu.people', icon: 'fas fa-users' }
+      - { entity: 'CommunityGroup', label : 'admin.menu.community_group', icon: 'far fa-comments' }
+      - { entity: 'Petition', label : 'Обращения' }
+      - { entity: 'Initiative', label : 'Инициативы' }
+
+#easy_admin:
+###    design:
+###        menu:
+###            - { entity: 'Subdivision', label: 'admin.menu.subdivisions', icon: 'building', default: true }
+###            - { entity: 'Department', label: 'admin.menu.departments', icon: 'user-friends' }
+###            - { entity: 'Phone', label: 'admin.menu.phones', icon: 'phone-square' }
+###            - { entity: 'Employee', label: 'admin.menu.employees', icon: 'address-card' }
