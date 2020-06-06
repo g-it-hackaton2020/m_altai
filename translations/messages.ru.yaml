@@ -37,6 +37,7 @@ admin:
     petition_type: 'Тип обращения'
     autor: 'Автор'
     signers: 'Подписанты'
+    stat: 'Стадия'
   values:
     sex:
       men : 'Мужской'

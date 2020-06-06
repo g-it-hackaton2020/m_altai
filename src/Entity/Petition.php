@@ -66,6 +66,11 @@ class Petition
      */
     private $num;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=DocStad::class, inversedBy="petitions")
+     */
+    private $stad;
+
     public function __construct()
     {
         $this->signers = new ArrayCollection();
@@ -175,4 +180,16 @@ class Petition
 //    public function doStuf(){
 //        $this->num = '10';
 //    }
+
+
+public function getStad(): ?DocStad
+{
+    return $this->stad;
 }
+
+public function setStad(?DocStad $stad): self
+{
+    $this->stad = $stad;
+
+    return $this;
+}}

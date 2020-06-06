@@ -11,6 +11,7 @@ easy_admin:
           - { property: 'petition_type', label: 'admin.fields.petition_type'}
           - { property: 'autor', label: 'admin.fields.autor' }
           - { property: 'signers', label: 'admin.fields.signers' }
+          - { property: 'stad', label: 'admin.fields.stat' }
           - { property: 'createdAt', label: 'admin.fields.created_at' }
           - { property : 'updatedAt', label : 'admin.fields.updated_at'}
       form:
