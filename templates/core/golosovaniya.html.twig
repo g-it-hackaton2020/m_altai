@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+
+        <div class="page-main">
+          {% include 'sidebar.html.twig' %}
+
+          <div class="content__wrapper">
+            <section class="main-content">
+              <div class="main-content__header">
+                <h2>Голосования</h2>
+                <a href="#" class="main-content__header__link">Провести голосование</a>
+              </div>
+
+              <div class="main-content__panel">
+                <div class="appeal__list vote__list">
+                  <div class="appeal__wrapper">
+                    <div class="appeal__header">
+                      <h3>Голосование за лидера группы <span>Новое</span></h3>
+
+                      <div class="appeal__header__share">
+                        <span class="appeal__header__date">с 17.04 по 24.04.2020</span>
+                      </div>
+                    </div>
+                    <div class="appeal__content vote__content">
+                      <p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+                        подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+                    </div>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-xl-3 mr-25">
+                          <p class="input__title vote__input__title">Лидер</p>
+                          <select id="inputState" class="form-control vote__select">
+                            <option selected>Выберите лидера</option>
+                            <option>и др.</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-xl-3">
+                          <button class="vote__btn">Отправить</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="appeal__wrapper">
+                    <div class="appeal__header">
+                      <h3>Голосование инициативы 2020/04-000346<span>Новое</span></h3>
+
+                      <div class="appeal__header__share">
+                        <a href="#">
+                          <i class="icon-logout"></i>Поделиться</a>
+                        <span class="appeal__header__date">с 17.04 по 24.04.2020</span>
+                      </div>
+                    </div>
+                    <div class="appeal__content vote__content">
+                      <p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+                        подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+                    </div>
+                    <div class="form-row vote__status__wrapper">
+                      <h4 class="vote__status">Идет голосование</h4>
+                    </div>
+                  </div>
+
+                  <div class="appeal__wrapper">
+                    <div class="appeal__header">
+                      <h3>Голосование инициативы 2020/04-000346</h3>
+
+                      <div class="appeal__header__share">
+                        <a href="#">
+                          <i class="icon-logout"></i>Поделиться</a>
+                        <span class="appeal__header__date">с 17.04 по 24.04.2020</span>
+                      </div>
+                    </div>
+                    <div class="appeal__content vote__content">
+                      <p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+                        подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+                    </div>
+                    <div class="form-row vote__status__wrapper">
+                      <h4 class="vote__status">Вы проголосовали: <a href="#">За</a></h4>
+                      <div class="form-group col-xl-3">
+                        <a href="#" class="vote__btn--danger">Отозвать голос</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="appeal__wrapper">
+                    <div class="appeal__header">
+                      <h3>Голосование инициативы 2020/04-000346</h3>
+
+                      <div class="appeal__header__share">
+                        <a href="#">
+                          <i class="icon-logout"></i>Поделиться</a>
+                        <span class="appeal__header__date">с 17.04 по 24.04.2020</span>
+                      </div>
+                    </div>
+                    <div class="appeal__content vote__content">
+                      <p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+                        подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+                    </div>
+                    <div class="form-row vote__status__wrapper">
+                      <h4 class="vote__status"><a href="#">За: 8 <span>участников</span></a></h4>
+                      <h4 class="vote__status">Против: 2 <span>участников</span></h4>
+                    </div>
+                  </div>
+                </div>
+                
+                </div>
+            </section>
+            {% include "footer.html.twig" %}
+          </div>
+        </div>
+
+
+
+{% endblock %}
