@@ -65,4 +65,15 @@ class PetitionController extends AbstractController
         return $this->render('petition/cur_petition.html.twig',[]);
     }
 
+    /**
+     * @Route("/delegation")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function delegation(){
+        return $this->render(
+            'petiton/delegation.html.twig',[]
+        );
+
+    }
+
 }
