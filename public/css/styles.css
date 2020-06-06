@@ -10,6 +10,8 @@
 @import "./projects.css";
 @import "./sidebar.css";
 @import "./appeal-form.css";
+@import "./vote-page.css";
+@import "./footer.css";
 
 /* outline input none */
 textarea:focus,
@@ -66,45 +68,9 @@ ul {
 }
 
 
-
-
-/**
-** Footer
-**/
-
-.page-footer {
-  padding: 49px 0;
-  margin-top: 187px;
-  border-top: 1px solid rgb(212, 212, 212);
-}
-
-.footer__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer__content {
-  width: 648px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer__content p {
-  margin-bottom: 0;
-}
-
-.footer__content img {
-  width: 80px;
-  height: 80px;
-}
-
 /**
 ** Modal
 **/
-
-
 .modal-header {
   border-bottom: none;
   justify-content: center;

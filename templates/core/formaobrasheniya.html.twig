@@ -86,32 +86,7 @@
 	</header>
 
 	<main class="page-main">
-		<sidebar class="main__sidebar">
-			<div class="sidebar__nav">
-				<ul class="sidebar__nav__list">
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-edit"></i>Личные обращения</a>
-					</li>
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-appeal"></i>Обращения</a>
-					</li>
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-user-check"></i>Голосования</a>
-					</li>
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-users-grey"></i>Участники</a>
-					</li>
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-panel"></i>Панель</a>
-					</li>
-				</ul>
-			</div>
-		</sidebar>
+		{% include 'sidebar.html.twig' %}
 
 		<div class="content__wrapper">
 			<section class="main-content">
@@ -219,17 +194,7 @@
 						</div>
 					</div>
 				</section>
-			<footer class="page-footer">
-				<div class="container">
-					<div class="footer__wrapper">
-						<div class="footer__content">
-							<img src="img/altay.png" alt="Герб Алтая">
-							<p>Интернет-портал государственных услуг, 2020 г.</p>
-							<img src="img/russia.png" alt="Герб России">
-						</div>
-					</div>
-				</div>
-			</footer>
+			{% include "footer.html.twig" %}
 		</div>
 	</main>
 {% endblock %}
