@@ -2,22 +2,19 @@
 
 namespace App\Entity;
 
-use App\Repository\PetitionTypeRepository;
+use App\Repository\DocStadRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Ramsey\Uuid\Uuid;
-use Ramsey\Uuid\UuidInterface;
 
 /**
- * @ORM\Entity(repositoryClass=App\Repository\PetitionTypeRepository::class)
+ * @ORM\Entity(repositoryClass=DocStadRepository::class)
  */
-class PetitionType
+class DocStad
 {
     /**
-     * @var UuidInterface
-     * @ORM\Id
-     * @ORM\Column(type="uuid")
+     * @ORM\Id()
+     * @ORM\Column(type="string", length=255)
      */
     private $id;
 
@@ -27,23 +24,18 @@ class PetitionType
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity=Petition::class, mappedBy="petition_type")
+     * @ORM\OneToMany(targetEntity=Petition::class, mappedBy="stad")
      */
     private $petitions;
 
     /**
-     * @ORM\OneToMany(targetEntity=Initiative::class, mappedBy="initiative_type")
+     * @ORM\OneToMany(targetEntity=Initiative::class, mappedBy="stad")
      */
     private $initiatives;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $code_type;
-
-    public function __construct()
+    public function __construct(string $id_name)
     {
-        $this->id = Uuid::uuid4();
+        $this->id = $id_name;
         $this->petitions = new ArrayCollection();
         $this->initiatives = new ArrayCollection();
     }
@@ -53,10 +45,7 @@ class PetitionType
         return $this->name;
     }
 
-    /**
-     * @return UuidInterface
-     */
-    public function getId(): UuidInterface
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -85,7 +74,7 @@ class PetitionType
     {
         if (!$this->petitions->contains($petition)) {
             $this->petitions[] = $petition;
-            $petition->setPetitionType($this);
+            $petition->setStad($this);
         }
 
         return $this;
@@ -96,8 +85,8 @@ class PetitionType
         if ($this->petitions->contains($petition)) {
             $this->petitions->removeElement($petition);
             // set the owning side to null (unless already changed)
-            if ($petition->getPetitionType() === $this) {
-                $petition->setPetitionType(null);
+            if ($petition->getStad() === $this) {
+                $petition->setStad(null);
             }
         }
 
@@ -116,7 +105,7 @@ class PetitionType
     {
         if (!$this->initiatives->contains($initiative)) {
             $this->initiatives[] = $initiative;
-            $initiative->setInitiativeType($this);
+            $initiative->setStad($this);
         }
 
         return $this;
@@ -127,22 +116,10 @@ class PetitionType
         if ($this->initiatives->contains($initiative)) {
             $this->initiatives->removeElement($initiative);
             // set the owning side to null (unless already changed)
-            if ($initiative->getInitiativeType() === $this) {
-                $initiative->setInitiativeType(null);
+            if ($initiative->getStad() === $this) {
+                $initiative->setStad(null);
             }
         }
-
-        return $this;
-    }
-
-    public function getCodeType(): ?int
-    {
-        return $this->code_type;
-    }
-
-    public function setCodeType(int $code_type): self
-    {
-        $this->code_type = $code_type;
 
         return $this;
     }

@@ -6,6 +6,7 @@ easy_admin:
       - { entity: 'CommunityGroup', label : 'admin.menu.community_group', icon: 'far fa-comments' }
       - { entity: 'Petition', label : 'Обращения' }
       - { entity: 'Initiative', label : 'Инициативы' }
+      - { entity: 'User', label : 'Пользователи' }
 
 #easy_admin:
 ###    design:

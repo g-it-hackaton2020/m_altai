@@ -9,3 +9,8 @@
 Для установки ресурсов необходимо выполнить 
 ```yarn install```
 
+После клонирования репозитория необходимо прописать параметры подключения к базе данных в файле ```.env``` и выполнить
+```
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+```
