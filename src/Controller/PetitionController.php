@@ -59,6 +59,14 @@ class PetitionController extends AbstractController
     }
 
     /**
+     * @Route("/guest_voter")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function guest_group_voter(){
+        return $this->render('petition/guest_voter.html.twig',[]);
+    }
+
+    /**
      * @Route("cur_petition")
      */
     public function cur_petition(){
