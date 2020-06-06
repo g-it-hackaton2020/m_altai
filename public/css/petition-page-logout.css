@@ -1,0 +1,67 @@
+.filter__wrapper {
+  margin-top: 30px;
+}
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter__title {
+  font-size: 21px;
+  color: #6A6A6A;
+}
+
+.filter__select {
+  width: 192px;
+}
+
+.filter__label {
+  font-size: 14px;
+}
+.filter__label .checkmark {
+  width: 19px;
+  height: 19px;
+  
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.filter__label .checkmark::after {
+  left: 5px;
+  top: 0px;
+}
+
+.petition__status {
+  margin-right: 30px;
+  font-family: Montserrat-semibold;
+  font-size: 16px;
+}
+
+.custom-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.petition__btns {
+  display: flex;
+  margin-top: 65px;
+  justify-content: center;
+}
+
+.petition__btn {
+  padding: 9px 16px;
+  margin-right: 9px;
+
+  background: #F0F0F0;
+  border: 1px solid #8B8B8B;
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.petition__btn:last-child {
+  margin-right: 0;
+}
