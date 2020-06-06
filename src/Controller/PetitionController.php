@@ -31,4 +31,31 @@ class PetitionController extends AbstractController
 
         ]);
     }
+
+    /**
+     * @Route("/group_petition")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function group_petition(){
+        return $this->render('petition/group_petition.html.twig',[
+
+        ]);
+    }
+
+    /**
+     * @Route("/voters")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function group_voters(){
+        return $this->render('petition/voters.html.twig',[]);
+    }
+
+    /**
+     * @Route("/voter")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function group_voter(){
+        return $this->render('petition/voter.html.twig',[]);
+    }
+
 }
