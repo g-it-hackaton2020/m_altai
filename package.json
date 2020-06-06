@@ -5,8 +5,10 @@
   "author": "Евгений С <evskorobogatij@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@fontawesome/fontawesome-free": "^5.13.0",
     "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "swiper": "^5.4.2",
     "toastr": "^2.1.4"
   }
 }
