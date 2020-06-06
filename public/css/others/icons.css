@@ -72,3 +72,22 @@
 .icon-panel {
   background-image: url("../../img/icons/panel.png");
 }
+
+.icon-like,
+.icon-dislike {
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-like {
+  background-image: url("../../img/icons/like.png");
+}
+
+.icon-dislike {
+  background-image: url("../../img/icons/dislike.png");
+}
