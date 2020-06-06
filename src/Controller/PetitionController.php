@@ -58,4 +58,11 @@ class PetitionController extends AbstractController
         return $this->render('petition/voter.html.twig',[]);
     }
 
+    /**
+     * @Route("cur_petition")
+     */
+    public function cur_petition(){
+        return $this->render('petition/cur_petition.html.twig',[]);
+    }
+
 }
