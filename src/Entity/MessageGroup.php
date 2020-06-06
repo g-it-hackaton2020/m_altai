@@ -31,6 +31,16 @@ class MessageGroup
      */
     private $messages;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Petition::class, mappedBy="discussions", cascade={"persist", "remove"})
+     */
+    private $petition;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Initiative::class, mappedBy="discussions", cascade={"persist", "remove"})
+     */
+    private $initiative;
+
     public function __construct()
     {
         $this->messages = new ArrayCollection();
@@ -71,6 +81,42 @@ class MessageGroup
             if ($message->getMessageGroup() === $this) {
                 $message->setMessageGroup(null);
             }
+        }
+
+        return $this;
+    }
+
+    public function getPetition(): ?Petition
+    {
+        return $this->petition;
+    }
+
+    public function setPetition(?Petition $petition): self
+    {
+        $this->petition = $petition;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newDiscussions = null === $petition ? null : $this;
+        if ($petition->getDiscussions() !== $newDiscussions) {
+            $petition->setDiscussions($newDiscussions);
+        }
+
+        return $this;
+    }
+
+    public function getInitiative(): ?Initiative
+    {
+        return $this->initiative;
+    }
+
+    public function setInitiative(?Initiative $initiative): self
+    {
+        $this->initiative = $initiative;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newDiscussions = null === $initiative ? null : $this;
+        if ($initiative->getDiscussions() !== $newDiscussions) {
+            $initiative->setDiscussions($newDiscussions);
         }
 
         return $this;

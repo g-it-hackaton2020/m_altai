@@ -76,6 +76,11 @@ class Initiative
      */
     private $community_group;
 
+    /**
+     * @ORM\OneToOne(targetEntity=MessageGroup::class, inversedBy="initiative", cascade={"persist", "remove"})
+     */
+    private $discussions;
+
     public function __construct()
     {
         $this->signers = new ArrayCollection();
@@ -203,5 +208,17 @@ class Initiative
 
     public function setCommunityGroup(?CommunityGroup $communityGroup){
         $this->community_group = $communityGroup;
+    }
+
+    public function getDiscussions(): ?MessageGroup
+    {
+        return $this->discussions;
+    }
+
+    public function setDiscussions(?MessageGroup $discussions): self
+    {
+        $this->discussions = $discussions;
+
+        return $this;
     }
 }
