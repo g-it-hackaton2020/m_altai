@@ -26,6 +26,15 @@
   margin-bottom: 40px;
 }
 
+.appeal__form__title > span {
+  padding: 2px 18px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #35D274;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
 .appeal__agreement {
   display: flex;
 }
