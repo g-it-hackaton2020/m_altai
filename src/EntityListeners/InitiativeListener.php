@@ -21,8 +21,10 @@ class InitiativeListener
         $num = $doc_num->getId();
 
         $initiative->setNum($num);
+        $d = new \DateTime();
+        $pre = $d->format("Y-m");
 
-        $initiative->setName("Инициатива ".str_pad((string)$num,8,'0',STR_PAD_LEFT));
+        $initiative->setName("Инициатива $pre/".str_pad((string)$num,8,'0',STR_PAD_LEFT));
 
     }
 

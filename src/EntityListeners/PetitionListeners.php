@@ -21,8 +21,10 @@ class PetitionListeners
         $num = $doc_num->getId();
 
         $petition->setNum($num);
+        $d = new \DateTime();
+        $pre = $d->format("Y-m");
 
-        $petition->setName("Обращение ".str_pad((string)$num,8,'0',STR_PAD_LEFT));
+        $petition->setName("Обращение $pre/".str_pad((string)$num,8,'0',STR_PAD_LEFT));
 
     }
 

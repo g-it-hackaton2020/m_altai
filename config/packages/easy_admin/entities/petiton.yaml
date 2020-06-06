@@ -16,7 +16,7 @@ easy_admin:
       form:
         fields:
           - { property: 'id', label: 'admin.fields.id', type_options: { disabled: true } }
-          - { property: 'name', label: 'admin.fields.petition_name'}
+          - { property: 'name', label: 'admin.fields.petition_name', type_options: { disabled: true } }
           - { property: 'description', label: 'admin.fields.description' }
           - { property: 'petition_type', label: 'admin.fields.petition_type'}
           - { property: 'autor', label: 'admin.fields.autor' }

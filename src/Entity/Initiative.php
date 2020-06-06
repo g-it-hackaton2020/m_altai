@@ -18,7 +18,7 @@ use Doctrine\ORM\Mapping\PrePersist;
 
 /**
  * @ApiResource()
- * @ORM\Entity(repositoryClass=App\Repository\PeopleRepository\InitiativeRepository::class)
+ * @ORM\Entity(repositoryClass=App\Repository\InitiativeRepository::class)
  * @ORM\EntityListeners({"App\EntityListeners\InitiativeListener"})
  * @HasLifecycleCallbacks
  */
