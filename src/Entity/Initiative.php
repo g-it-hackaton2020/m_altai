@@ -71,10 +71,16 @@ class Initiative
      */
     private $stad;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=CommunityGroup::class, inversedBy="initiatives")
+     */
+    private $community_group;
+
     public function __construct()
     {
         $this->signers = new ArrayCollection();
         $this->id = Uuid::uuid4();
+
     }
 
     public function __toString()
@@ -186,5 +192,16 @@ class Initiative
         $this->stad = $stad;
 
         return $this;
+    }
+
+
+    public function getCommunityGroup(): ?CommunityGroup
+    {
+        return $this->community_group;
+    }
+
+
+    public function setCommunityGroup(?CommunityGroup $communityGroup){
+        $this->community_group = $communityGroup;
     }
 }

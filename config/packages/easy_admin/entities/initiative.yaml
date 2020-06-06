@@ -10,6 +10,7 @@ easy_admin:
           - { property: 'description', label: 'admin.fields.description' }
           - { property: 'initiative_type', label: 'admin.fields.petition_type'}
           - { property: 'autor', label: 'admin.fields.autor' }
+          - { property: 'community_group', label: 'admin.fields.community_group'}
           - { property: 'signers', label: 'admin.fields.signers' }
           - { property: 'stad', label: 'admin.fields.stat' }
           - { property: 'createdAt', label: 'admin.fields.created_at' }
@@ -20,6 +21,7 @@ easy_admin:
 #          - { property: 'name', label: 'admin.fields.initiative_name'}
           - { property: 'description', label: 'admin.fields.description' }
           - { property: 'initiative_type', label: 'admin.fields.petition_type'}
+          - { property: 'community_group', label: 'admin.fields.community_group'}
           - { property: 'autor', label: 'admin.fields.autor' }
           - { property: 'signers', label: 'admin.fields.signers' }
           - { property: 'createdAt', label: 'admin.fields.created_at', type_options: { widget: 'single_text', required: false, disabled: true } }
