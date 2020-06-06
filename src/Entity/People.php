@@ -98,6 +98,21 @@ class People
      */
     private $p_user;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Message::class, mappedBy="author", orphanRemoval=true)
+     */
+    private $messages;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Message::class, mappedBy="likers")
+     */
+    private $likes_messages;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Message::class, mappedBy="dislikers")
+     */
+    private $dislikes_messages;
+
     public function __construct()
     {
         $this->id = \Ramsey\Uuid\Uuid::uuid4();
@@ -107,6 +122,9 @@ class People
         $this->my_petitions = new ArrayCollection();
         $this->initiatives = new ArrayCollection();
         $this->signed_initiatives = new ArrayCollection();
+        $this->messages = new ArrayCollection();
+        $this->likes_messages = new ArrayCollection();
+        $this->dislikes_messages = new ArrayCollection();
     }
 
     public function __toString()
@@ -393,6 +411,93 @@ class People
         $newPeople = null === $p_user ? null : $this;
         if ($p_user->getPeople() !== $newPeople) {
             $p_user->setPeople($newPeople);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Message[]
+     */
+    public function getMessages(): Collection
+    {
+        return $this->messages;
+    }
+
+    public function addMessage(Message $message): self
+    {
+        if (!$this->messages->contains($message)) {
+            $this->messages[] = $message;
+            $message->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMessage(Message $message): self
+    {
+        if ($this->messages->contains($message)) {
+            $this->messages->removeElement($message);
+            // set the owning side to null (unless already changed)
+            if ($message->getAuthor() === $this) {
+                $message->setAuthor(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Message[]
+     */
+    public function getLikesMessages(): Collection
+    {
+        return $this->likes_messages;
+    }
+
+    public function addLikesMessage(Message $likesMessage): self
+    {
+        if (!$this->likes_messages->contains($likesMessage)) {
+            $this->likes_messages[] = $likesMessage;
+            $likesMessage->addLiker($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLikesMessage(Message $likesMessage): self
+    {
+        if ($this->likes_messages->contains($likesMessage)) {
+            $this->likes_messages->removeElement($likesMessage);
+            $likesMessage->removeLiker($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Message[]
+     */
+    public function getDislikesMessages(): Collection
+    {
+        return $this->dislikes_messages;
+    }
+
+    public function addDislikesMessage(Message $dislikesMessage): self
+    {
+        if (!$this->dislikes_messages->contains($dislikesMessage)) {
+            $this->dislikes_messages[] = $dislikesMessage;
+            $dislikesMessage->addDisliker($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDislikesMessage(Message $dislikesMessage): self
+    {
+        if ($this->dislikes_messages->contains($dislikesMessage)) {
+            $this->dislikes_messages->removeElement($dislikesMessage);
+            $dislikesMessage->removeDisliker($this);
         }
 
         return $this;
