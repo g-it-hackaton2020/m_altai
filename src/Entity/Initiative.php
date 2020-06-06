@@ -7,14 +7,20 @@ use App\Repository\InitiativeRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\EntityListeners;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
+use Doctrine\ORM\Mapping\HasLifecycleCallbacks;
+use Doctrine\ORM\Mapping\PrePersist;
+
 /**
  * @ApiResource()
- * @ORM\Entity(repositoryClass=App\Repository\PeopleRepository\InitiativeRepository::class)
+ * @ORM\Entity(repositoryClass=App\Repository\InitiativeRepository::class)
+ * @ORM\EntityListeners({"App\EntityListeners\InitiativeListener"})
+ * @HasLifecycleCallbacks
  */
 class Initiative
 {
@@ -55,10 +61,26 @@ class Initiative
      */
     private $signers;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $num;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=DocStad::class, inversedBy="initiatives")
+     */
+    private $stad;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=CommunityGroup::class, inversedBy="initiatives")
+     */
+    private $community_group;
+
     public function __construct()
     {
         $this->signers = new ArrayCollection();
         $this->id = Uuid::uuid4();
+
     }
 
     public function __toString()
@@ -146,5 +168,40 @@ class Initiative
         }
 
         return $this;
+    }
+
+    public function getNum(): ?int
+    {
+        return $this->num;
+    }
+
+    public function setNum(?int $num): self
+    {
+        $this->num = $num;
+
+        return $this;
+    }
+
+    public function getStad(): ?DocStad
+    {
+        return $this->stad;
+    }
+
+    public function setStad(?DocStad $stad): self
+    {
+        $this->stad = $stad;
+
+        return $this;
+    }
+
+
+    public function getCommunityGroup(): ?CommunityGroup
+    {
+        return $this->community_group;
+    }
+
+
+    public function setCommunityGroup(?CommunityGroup $communityGroup){
+        $this->community_group = $communityGroup;
     }
 }

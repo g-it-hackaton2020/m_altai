@@ -28,6 +28,7 @@ admin:
     email: 'e-mail'
     description: 'Описание'
     community_name: 'Название сообщества'
+    community_group: 'Сообщество'
     lead: 'Лидер'
     peoples: 'Люди'
     created_at: 'Создано'
@@ -37,6 +38,7 @@ admin:
     petition_type: 'Тип обращения'
     autor: 'Автор'
     signers: 'Подписанты'
+    stat: 'Стадия'
   values:
     sex:
       men : 'Мужской'

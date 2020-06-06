@@ -51,10 +51,23 @@ class CommunityGroup
      */
     private $peoples;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity=Initiative::class, mappedBy="community_group")
+     */
+    private $initiatives;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Petition::class, mappedBy="community_group")
+     */
+    private $petitions;
+
     public function __construct()
     {
         $this->id = \Ramsey\Uuid\Uuid::uuid4();
         $this->peoples = new ArrayCollection();
+        $this->petitions = new ArrayCollection();
+        $this->initiatives = new ArrayCollection();
     }
 
     public function __toString()
@@ -124,6 +137,63 @@ class CommunityGroup
     {
         if ($this->peoples->contains($people)) {
             $this->peoples->removeElement($people);
+        }
+
+        return $this;
+    }
+
+
+    /**
+     * @return Collection|Initiative[]
+     */
+    public function getInitiatives(): Collection
+    {
+        return $this->initiatives;
+    }
+
+    public function addInitiative(Initiative $initiative): self
+    {
+        if (!$this->initiatives->contains($initiative)) {
+            $this->initiatives[] = $initiative;
+            $initiative->addCommunityGroup($this);
+        }
+
+        return $this;
+    }
+
+    public function removeInitiative(Initiative $initiative): self
+    {
+        if ($this->initiatives->contains($initiative)) {
+            $this->initiatives->removeElement($initiative);
+            $initiative->removeCommunityGroup($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Petition[]
+     */
+    public function getPetitions(): Collection
+    {
+        return $this->petitions;
+    }
+
+    public function addPetition(Petition $petition): self
+    {
+        if (!$this->petitions->contains($petition)) {
+            $this->petitions[] = $petition;
+            $petition->addCommunityGroup($this);
+        }
+
+        return $this;
+    }
+
+    public function removePetition(Petition $petition): self
+    {
+        if ($this->petitions->contains($petition)) {
+            $this->petitions->removeElement($petition);
+            $petition->removeCommunityGroup($this);
         }
 
         return $this;
