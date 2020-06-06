@@ -125,6 +125,15 @@
   margin-bottom: 20px;
 }
 
+.appeal__header__title > span.admin {
+  padding: 2px 18px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #007EFF;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
 .appeal__header h3 {
   font-size: 20px;
 }
