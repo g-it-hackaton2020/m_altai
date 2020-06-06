@@ -4,224 +4,264 @@
 {% endblock %}
 
 {% block body %}
-
+	{# <style>
+	    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+	    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+	</style> #}
 	<header class="page-header">
-		<div class="container-fluid d-flex">
-			<div class="header__logo">
-				<a href="#" class="main-navbar__logo">
-					<img src="./img/logo.svg" alt="логотип">
-				</a>
-			</div>
-			<button class="burger__trigger">
-				<span></span>
-			</button>
-			<div class="mobile__menu">
-				<ul class="mobile-navbar__list">
-					<li class="mobile-navbar__list__item">
-						<a href="#">Главная</a>
-					</li>
-					<li class="mobile-navbar__list__item">
-						<a href="#">Обращения</a>
-					</li>
-					<li class="mobile-navbar__list__item">
-						<a href="#">Результаты</a>
-					</li>
-					<li class="mobile-navbar__list__item">
-						<a href="#">Рейтинги</a>
-					</li>
-					<li class="mobile-navbar__list__item">
-						<a href="#">Новости</a>
-					</li>
-				</ul>
-				<ul class="mobile-person__list">
-					<li class="mobile-person__list__item">
-						<a href="#">Зарегистрироваться</a>
-					</li>
-					<li class="mobile-person__list__item">
-						<a href="#">Войти</a>
-					</li>
-				</ul>
-			</div>
-			<div class="navbar__wrapper">
-				<navbar class="main-navbar">
-					<div class="row justify-b menu-reverse">
-						<div class="col-xl-5">
-							<div class="main-navbar__left">
-								<ul class="main-navbar__list">
-									<li class="navbar__list__item navbar__list__item--active">
-										<a href="#">Главная</a>
-									</li>
-									<li class="navbar__list__item">
-										<a href="#">Обращения</a>
-									</li>
-									<li class="navbar__list__item">
-										<a href="#">Результаты</a>
-									</li>
-									<li class="navbar__list__item">
-										<a href="#">Рейтинги</a>
-									</li>
-									<li class="navbar__list__item">
-										<a href="#">Новости</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-xl-3 offset-1">
-							<form class="navbar__form">
-								<input type="search" name="search" class="navbar-search__input" placeholder="Искать обращение, жалобу, группу">
-								<button class="navbar-search__btn"></button>
-							</form>
-						</div>
-						<div class="col-xl-2">
-							<div class="navbar__person">
-								<img src="./img/person.png" alt="Фотография" class="navbar__person__img">
-								<a href="#" class="navbar__person__name">Илья Кондрашев</a>
-							</div>
-						</div>
+	    <div class="container d-flex">
+					<div class="header__logo">
+							<a href="#" class="main-navbar__logo">
+									<img src="./img/logo.svg" alt="логотип">
+							</a>
 					</div>
-
-				</navbar>
-			</div>
-		</div>
+					<button class="burger__trigger"><span></span></button>
+					<div class="mobile__menu">
+						<ul class="mobile-navbar__list">
+							<li class="mobile-navbar__list__item"><a href="#">Главная</a></li>
+							<li class="mobile-navbar__list__item"><a href="#">Обращения</a></li>
+							<li class="mobile-navbar__list__item"><a href="#">Результаты</a></li>
+							<li class="mobile-navbar__list__item"><a href="#">Рейтинги</a></li>
+							<li class="mobile-navbar__list__item"><a href="#">Новости</a></li>
+						</ul>
+						<ul class="mobile-person__list">
+							<li class="mobile-person__list__item"><a href="#">Зарегистрироваться</a></li>
+							<li class="mobile-person__list__item"><a href="#">Войти</a></li>
+						</ul>
+					</div>
+					<div class="navbar__wrapper">
+						<navbar class="main-navbar">
+								<div class="row justify-b menu-reverse">
+										<div class="col-lg-5">
+												<div class="main-navbar__left">
+														<ul class="main-navbar__list">
+																<li class="navbar__list__item navbar__list__item--active"><a href="#">Главная</a></li>
+																<li class="navbar__list__item"><a href="#">Обращения</a></li>
+																<li class="navbar__list__item"><a href="#">Результаты</a></li>
+																<li class="navbar__list__item"><a href="#">Рейтинги</a></li>
+																<li class="navbar__list__item"><a href="#">Новости</a></li>
+														</ul>
+												</div>
+										</div>
+										<div class="col-lg-3">
+												<div class="main-navbar__person justify-e">
+														<a href="/" class="person__btn person__btn--active">Зарегистрироваться</a>
+														<a href="/" class="person__btn">Войти</a>
+												</div>
+										</div>
+										{# <div class="col-lg-3">
+												<form class="navbar__form">
+														<input type="search" name="search" class="navbar-search__input" placeholder="Искать обращение, жалобу, группу">
+														<button class="navbar-search__btn"></button>
+												</form>
+										</div>
+										<div class="col-lg-2">
+												<div class="navbar__person">
+														<img src="./img/person.png" alt="Фотография" class="navbar__person__img">
+														<a href="#" class="navbar__person__name">Илья Кондрашев</a>
+												</div> #}
+										</div>
+								</div>
+		
+						</navbar>
+					</div>
+	    </div>
 	</header>
 
-	<main class="page-main">
-		<sidebar class="main__sidebar">
-			<div class="sidebar__nav">
-				<ul class="sidebar__nav__list">
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-edit"></i>Личные обращения</a>
-					</li>
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-appeal"></i>Обращения</a>
-					</li>
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-user-check"></i>Голосования</a>
-					</li>
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-users-grey"></i>Участники</a>
-					</li>
-					<li class="sidebar__nav__list__item">
-						<a href="#">
-							<i class="icon-panel"></i>Панель</a>
-					</li>
-				</ul>
-			</div>
-		</sidebar>
+{# <header class="page-header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="логотип"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-		<div class="content__wrapper">
-				<section class="main-content">
-					<div class="main-content__header">
-						<h2>Новое обращение</h2>
-            <a href="#" class="main-content__header__link">Составить обращение</a>
-					</div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Главная
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Обращения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Результаты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Рейтинги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Новости</a>
+                    </li>
+                </ul>
+                <form class="navbar__form d-none d-md-block">
+                    <input type="search" name="search" class="navbar-search__input" placeholder="Искать обращение, жалобу, группу">
+                    <button class="navbar-search__btn"></button>
+                </form>
+                <div class="navbar__person d-none d-md-block">
+                    <img src="./img/person.png" alt="Фотография" class="navbar__person__img">
+                    <a href="#" class="navbar__person__name">Илья Кондрашев</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header> #}
 
-					<div class="main-content__panel">
-						<div class="appeal__form">
-							<h3 class="appeal__form__title">Обращение</h3>
-
-							<p class="appeal__agreement">
-								<label class="main-content__label">Я соглашаюсь
-									<input type="checkbox" checked="checked" name="agreement">
-									<span class="checkmark"></span>
-								</label>
-								<a href="#">с порядком приема и подачи обращений</a>
-							</p>
-
-							<form class="appeal__submit">
-								<div class="form-row">
-									<div class="form-group col-xl-3 mr-25">
-										<p class="input__title">Адресат</p>
-										<select id="inputState" class="form-control">
-											<option selected>И.И.Иванов</option>
-											<option>и др.</option>
-										</select>
-									</div>
-									<div class="form-group col-xl-3 mr-80">
-										<p class="input__title">Ответственный</p>
-										<select id="inputState" class="form-control">
-											<option selected>И.И.Иванов</option>
-											<option>и др.</option>
-										</select>
-									</div>
-									<div class="form-group col-xl-3">
-										<p class="input__title">Форма обращения</p>
-										<div class="appeal__radio-buttons">
-											<p>
-												<input
-													class="form-check-input"
-													type="radio"
-													name="gridRadios"
-													id="gridRadios1"
-													value="option1" checked>
-												<label class="form-check-label" for="gridRadios1">
-													Жалоба
-												</label>
-											</p>
-											<p>
-												<input
-													class="form-check-input"
-													type="radio"
-													name="gridRadios"
-													id="gridRadios1"
-													value="option1" checked>
-												<label class="form-check-label" for="gridRadios1">
-													Инициатива
-												</label>
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-row">
-									<div class="form-group col-xl-12">
-										<p class="input__title">Форма обращения</p>
-										<textarea class="form-control appeal__textarea" id="exampleFormControlTextarea1" rows="3" placeholder="Введите текст"></textarea>
-									</div>
-								</div>
-
-								<div class="form-row">
-									<div class="form-group col-xl-6">
-										<p class="input__title">Приложить файлы</p>
-										<div class="custom-file">
-											<input type="file" class="custom-file-input" id="customFile">
-											<label class="custom-file-label" for="customFile">Выбрать файлы</label>
-										</div>
-										<p class="appeal__submit__promt">Вы можете прикрепить к сообщению документы и фото.</p>
-										
-										<label class="main-content__label appeal__public">Сделать обращения публичным
-											<input type="checkbox" checked="checked" name="public">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-								</div>
-
-								<div class="form-row">
-									<div class="form-group col-xl-12">
-										<p class="input__title">Теги</p>
-										<input class="appeal__form__tags" type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput"/>
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="form-group col-xl-12">
-										<button class="btn">Отправить</button>
-										<button class="btn">Сохранить</button>
-										<button class="btn">Голосовать</button>
-									</div>
-								</div>
+	<div class="hero">
+		<div class="container ">
+			<div class="row justify-content-between">
+				<div class="col-xl-7">
+					<div class="hero-left">
+						<div class="search__form">
+							<form method="post" accept-charset="UTF-8">
+								<input type="search" name="search" class="search__input" placeholder="Искать обращение, жалобу, группу">
+								<button class="search__btn"></button>
 							</form>
-							
+						</div>
+						<div class="prides__wrapper">
+							<div class="prides__item">
+								<div class="prides__info">
+                                    <i class="icon-user"></i>
+									<p>Пользователей</p>
+								</div>
+                                <span class="prides__num">106 375</span>
+							</div>
+							<div class="prides__item">
+								<div class="prides__info">
+                                    <i class="icon-users"></i>
+									<p>Зарегистрировано групп</p>
+								</div>
+                                <span class="prides__num">1 406</span>
+							</div>
+							<div class="prides__item prides__item--success">
+								<div class="prides__info">
+                                    <i class="icon-check"></i>
+									<p>Решено проблем</p>
+								</div>
+                                <span class="prides__num">122 463</span>
+							</div>
 						</div>
 					</div>
-				</section>
+				</div>
+				<div class="col-xl-1 d-none d-lg-block d-xl-block">
+					<div class="hero-line"></div>
+				</div>
+				<div class="col-xl-3">
+					<div class="hero-right">
+						<div class="hero__btn">
+							<a href="#" class="btn custom-btn custom-btn--danger">Сообщить о проблеме</a>
+						</div>
+						<div class="hero__btn">
+							<a href="#" class="btn custom-btn custom-btn--primary">Коллективное обращение</a>
+						</div>
+						<div class="hero__btn">
+							<a href="#" class="btn custom-btn">Создать группу</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
+	<section class="projects">
+		<div class="container">
+			<h2 class="section__header">
+					<a href="#">Результаты работы <i class="icon-right"></i></a>
+			</h2>
+			<div class="galery-container">
+					<div class="row">
+						<div class="galery__top">
+							<div class="image__wrapper">
+								<img src="img/projects/01.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/02.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/03.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/04.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/05.png" alt="Project">
+							</div>
+						</div>
+						<div class="galery__bottom">
+							<div class="image__wrapper">
+								<img src="img/projects/06.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/07.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/08.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/09.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/10.png" alt="Project">
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
 
-	</main>
+	<section class="appeals">
+		<div class="container">
+			<h2 class="section__header">
+					<a href="#">Список обращений <i class="icon-right"></i></a>
+			</h2>
+
+			<div class="appeal__list">
+				<div class="appeal__wrapper">
+					<div class="appeal__header">
+						<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+						<div class="appeal__header__share">
+							<a href="#"><i class="icon-logout"></i>Поделиться</a>
+							<span class="appeal__header__date">24.04.20</span>
+						</div>
+					</div>
+					<div class="appeal__content">
+						<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+					</div>
+				</div>
+				<div class="appeal__wrapper">
+					<div class="appeal__header">
+						<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+						<div class="appeal__header__share">
+							<a href="#"><i class="icon-logout"></i>Поделиться</a>
+							<span class="appeal__header__date">24.04.20</span>
+						</div>
+					</div>
+					<div class="appeal__content">
+						<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+					</div>
+				</div>
+				<div class="appeal__wrapper">
+					<div class="appeal__header">
+						<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+						<div class="appeal__header__share">
+							<a href="#"><i class="icon-logout"></i>Поделиться</a>
+							<span class="appeal__header__date">24.04.20</span>
+						</div>
+					</div>
+					<div class="appeal__content">
+						<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<footer class="page-footer">
 		<div class="container">
