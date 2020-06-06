@@ -113,6 +113,16 @@ class People
      */
     private $dislikes_messages;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=People::class, inversedBy="principals")
+     */
+    private $trusted_leader;
+
+    /**
+     * @ORM\OneToMany(targetEntity=People::class, mappedBy="trusted_leader")
+     */
+    private $principals;
+
     public function __construct()
     {
         $this->id = \Ramsey\Uuid\Uuid::uuid4();
@@ -125,6 +135,7 @@ class People
         $this->messages = new ArrayCollection();
         $this->likes_messages = new ArrayCollection();
         $this->dislikes_messages = new ArrayCollection();
+        $this->principals = new ArrayCollection();
     }
 
     public function __toString()
@@ -498,6 +509,49 @@ class People
         if ($this->dislikes_messages->contains($dislikesMessage)) {
             $this->dislikes_messages->removeElement($dislikesMessage);
             $dislikesMessage->removeDisliker($this);
+        }
+
+        return $this;
+    }
+
+    public function getTrustedLeader(): ?self
+    {
+        return $this->trusted_leader;
+    }
+
+    public function setTrustedLeader(?self $trusted_leader): self
+    {
+        $this->trusted_leader = $trusted_leader;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|self[]
+     */
+    public function getPrincipals(): Collection
+    {
+        return $this->principals;
+    }
+
+    public function addPrincipal(self $principal): self
+    {
+        if (!$this->principals->contains($principal)) {
+            $this->principals[] = $principal;
+            $principal->setTrustedLeader($this);
+        }
+
+        return $this;
+    }
+
+    public function removePrincipal(self $principal): self
+    {
+        if ($this->principals->contains($principal)) {
+            $this->principals->removeElement($principal);
+            // set the owning side to null (unless already changed)
+            if ($principal->getTrustedLeader() === $this) {
+                $principal->setTrustedLeader(null);
+            }
         }
 
         return $this;
