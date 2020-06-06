@@ -93,6 +93,11 @@ class People
      */
     private $signed_initiatives;
 
+    /**
+     * @ORM\OneToOne(targetEntity=User::class, mappedBy="people", cascade={"persist", "remove"})
+     */
+    private $p_user;
+
     public function __construct()
     {
         $this->id = \Ramsey\Uuid\Uuid::uuid4();
@@ -370,6 +375,24 @@ class People
         if ($this->signed_initiatives->contains($signedInitiative)) {
             $this->signed_initiatives->removeElement($signedInitiative);
             $signedInitiative->removeSigner($this);
+        }
+
+        return $this;
+    }
+
+    public function getPUser(): ?User
+    {
+        return $this->p_user;
+    }
+
+    public function setPUser(?User $p_user): self
+    {
+        $this->p_user = $p_user;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newPeople = null === $p_user ? null : $this;
+        if ($p_user->getPeople() !== $newPeople) {
+            $p_user->setPeople($newPeople);
         }
 
         return $this;
