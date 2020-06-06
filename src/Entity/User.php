@@ -11,6 +11,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
  * @ApiResource
  * @ORM\Entity(repositoryClass=App\Repository\UserRepository::class)
  * @ORM\Table(name="`user`")
+ * @UniqueEntity(fields={"email"}, message="У вас уже есть аккаунт")
  */
 class User implements UserInterface
 {
