@@ -33,6 +33,12 @@
 ** Main content panel
 **/
 
+.content__wrapper {
+  width: 100%;
+  padding-bottom: 79px;
+  padding-right: 100px;
+}
+
 .main-content {
   margin-top: 79px;
   padding-left: 63px;
@@ -52,6 +58,9 @@
 .main-content__header__filter {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  max-width: 535px;
+  width: 100%;
 }
 
 .main-content__header__filter form {
@@ -76,7 +85,8 @@
 .main-content__label {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 25px;
+  margin-right: 10px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;

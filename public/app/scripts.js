@@ -6,4 +6,7 @@ $(document).ready(function(){
     $('.menu-hide').removeClass('show');
     $('.menu-tab').removeClass('active');
   });
+
+  // Теги для формы
+  $(".appeal__form__tags").tagsinput('items')
 });

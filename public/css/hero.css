@@ -104,11 +104,14 @@
   font-size: 36px;
 }
 @media screen and (min-width: 1440px) {
-  .prides__info p {
-    font-size: 16px;
+  .prides__item p {
+    font-size: 18px;
   }
-  .prides__info > span {
-    font-size: 28px;
+  .prides__item > span {
+    font-size: 31px;
+    margin-left: 15px;
+    position: relative;
+    width: 125px;
   }
 }
 
@@ -221,6 +224,7 @@
   }
   .prides__item span {
     margin-left: 0;
+    font-size: 18px;
   }
 
   .hero-right {

@@ -9,6 +9,7 @@
 @import "./hero.css";
 @import "./projects.css";
 @import "./sidebar.css";
+@import "./appeal-form.css";
 
 /* outline input none */
 textarea:focus,
@@ -73,7 +74,7 @@ ul {
 
 .page-footer {
   padding: 49px 0;
-  border-top: 1px solid #000;
+  border-top: 1px solid rgb(212, 212, 212);
 }
 
 .footer__wrapper {
