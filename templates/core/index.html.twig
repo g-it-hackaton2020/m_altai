@@ -49,7 +49,8 @@
 
 
 													{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-														<p style="width: 200px">Email: {{ app.user.email }}</p>
+                                                        <p style="width: 200px">Email: {{ app.user.email }}  <b>{{ app.user.people.fam }} {{ app.user.people.im }}</b> </p>
+
 														<a
 																href="/logout"
 																class="person__btn person__btn--active"
