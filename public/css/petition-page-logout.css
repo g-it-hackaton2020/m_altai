@@ -17,7 +17,7 @@
 }
 
 .filter__label {
-  font-size: 14px;
+  font-size: 13px;
 }
 .filter__label .checkmark {
   width: 19px;
@@ -38,7 +38,7 @@
 .petition__status {
   margin-right: 30px;
   font-family: Montserrat-semibold;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .custom-container {

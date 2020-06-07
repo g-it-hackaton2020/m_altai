@@ -44,8 +44,7 @@
 }
 
 .appeal__agreement a {
-  padding-bottom: 5px;
-  border-bottom: 1px solid #000;
+  text-decoration: underline;
 }
 
 .appeal__agreement label {
