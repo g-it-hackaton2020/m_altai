@@ -8,7 +8,8 @@
 	{% include 'header.html.twig' %}
 
 	<main class="page-main">
-		<sidebar class="main__sidebar">
+		{% include "sidebar.html.twig" %}
+		{# <sidebar class="main__sidebar">
 			<div class="sidebar__nav">
 				<ul class="sidebar__nav__list">
 					<li class="sidebar__nav__list__item">
@@ -33,7 +34,7 @@
 					</li>
 				</ul>
 			</div>
-		</sidebar>
+		</sidebar> #}
 
 		<div class="content__wrapper">
 				<section class="main-content">
@@ -56,15 +57,8 @@
 
 							<form class="appeal__submit">
 								<div class="form-row">
-									<div class="form-group col-xl-3 mr-25">
+									<div class="form-group col-xl-3 mr-25 mb-30">
 										<p class="input__title">Адресат</p>
-										<select id="inputState" class="form-control">
-											<option selected>И.И.Иванов</option>
-											<option>и др.</option>
-										</select>
-									</div>
-									<div class="form-group col-xl-3 mr-80">
-										<p class="input__title">Ответственный</p>
 										<select id="inputState" class="form-control">
 											<option selected>И.И.Иванов</option>
 											<option>и др.</option>
@@ -128,11 +122,12 @@
 										<input class="appeal__form__tags" type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput"/>
 									</div>
 								</div>
-								<div class="form-row">
-									<div class="form-group col-xl-12">
-										<button class="btn">Отправить</button>
-										<button class="btn">Сохранить</button>
-										<button class="btn">Голосовать</button>
+								<div class="appeal__line"></div>
+								<div class="form-row mt-30">
+									<div class="form-group mb-0 col-xl-12">
+										<button class="btn appeal__btn">Отправить</button>
+										<button class="btn appeal__btn">Сохранить</button>
+										<button class="btn appeal__btn">Голосовать</button>
 									</div>
 								</div>
 							</form>
