@@ -151,6 +151,12 @@ button.close {
   text-align: left;
 }
 
+.modal-social-btn-register {
+  background-color: #007EFF;
+  color: #fff;
+  border: none;
+}
+
 .modal-social-vk {
   background-image: url("../img/icons/vk.svg");
   background-repeat: no-repeat;
