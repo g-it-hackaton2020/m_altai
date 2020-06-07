@@ -17,6 +17,7 @@ admin:
     community_group: Сообщества
     petitions: 'Обращения'
     initiatives: Инициативы
+    user: Пользователи
   fields:
     id: 'ID'
     fam: 'Фамилия'
@@ -31,6 +32,7 @@ admin:
     community_group: 'Сообщество'
     lead: 'Лидер'
     peoples: 'Люди'
+    people: 'Человек'
     created_at: 'Создано'
     updated_at: 'Обновлено'
     petition_name: 'Наименование обращения'
