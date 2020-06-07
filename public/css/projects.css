@@ -138,6 +138,12 @@
   font-size: 20px;
 }
 
+@media screen and (max-width: 1440px) {
+  .appeal__header h3 {
+    font-size: 18px;
+  }
+}
+
 .appeal__header h3 > span {
   padding: 2px 18px;
   font-size: 15px;

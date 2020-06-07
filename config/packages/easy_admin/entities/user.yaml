@@ -3,3 +3,8 @@ easy_admin:
     User:
       class: App\Entity\User
       label: 'admin.label.user'
+      list:
+        fields:
+          - { property : 'ID', label : 'admin.fields.id' }
+          - { property : 'email', label : 'admin.fields.email' }
+          - { property : 'people', label : 'admin.fields.people'}

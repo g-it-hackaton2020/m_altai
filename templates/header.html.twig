@@ -41,10 +41,27 @@
 									</form>
 								</div>
 								<div class="col-xl-2">
-									<div class="navbar__person">
-										<img src={{ asset("img/person.png") }} alt="Фотография" class="navbar__person__img">
-										<a href="#" class="navbar__person__name">Илья Кондрашев</a>
-									</div>
+
+									{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+										<div class="navbar__person">
+											<img src={{ asset("img/person.png") }} alt="Фотография" class="navbar__person__img">
+											<a href={{ asset("petition/group_petition") }} class="navbar__person__name"> <b>{{ app.user.people.fam }} {{ app.user.people.im }}</b> <br/><span style="color: gray">{{ app.user.email }}</span>  </a>
+
+{#                                            <span><i class="fas fa-sign-out-alt"></i></span> #}
+										</div>
+
+									{% else %}
+										<a
+												href="#exampleModal"
+												class="person__btn person__btn--active"
+												data-toggle="modal"
+												data-target="#exampleModal"
+										>Зарегистрироваться</a>
+										<a href="/login" class="person__btn">Войти</a>
+
+									{% endif %}
+
 								</div>
 							</div>
 

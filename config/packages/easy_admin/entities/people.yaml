@@ -10,7 +10,7 @@ easy_admin:
           - { property: 'im', label: 'admin.fields.im' }
           - { property: 'ot',label: 'admin.fields.ot'}
           - { property : 'birth_date', label : 'admin.fields.birth_date'}
-          - { property : 'sex', label : 'admin.fields.sex' }
+          - { property : 'sex', label : 'admin.fields.sex', type_options: { widget: 'single_text' } }
           - { property : 'createdAt', label : 'admin.fields.created_at'}
           - { property : 'updatedAt', label : 'admin.fields.updated_at'}
       form:

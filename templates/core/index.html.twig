@@ -4,88 +4,8 @@
 {% endblock %}
 
 {% block body %}
-	{# <style>
-	    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-	    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-	</style> #}
-	<header class="page-header">
-	    <div class="container d-flex">
-					<div class="header__logo">
-							<a href="#" class="main-navbar__logo">
-									<img src={{ asset("img/logo.svg") }} alt="логотип">
-							</a>
-					</div>
-					<button class="burger__trigger"><span></span></button>
-					<div class="mobile__menu">
-						<ul class="mobile-navbar__list">
-							<li class="mobile-navbar__list__item"><a href="#">Главная</a></li>
-							<li class="mobile-navbar__list__item"><a href="#">Обращения</a></li>
-							<li class="mobile-navbar__list__item"><a href="#">Результаты</a></li>
-							<li class="mobile-navbar__list__item"><a href="#">Рейтинги</a></li>
-							<li class="mobile-navbar__list__item"><a href="#">Новости</a></li>
-						</ul>
-						<ul class="mobile-person__list">
-							<li class="mobile-person__list__item"><a href="#">Зарегистрироваться</a></li>
-							<li class="mobile-person__list__item"><a href="#">Войти</a></li>
-						</ul>
-					</div>
-					<div class="navbar__wrapper">
-						<navbar class="main-navbar">
-								<div class="row justify-b menu-reverse">
-										<div class="col-lg-5">
-												<div class="main-navbar__left">
-														<ul class="main-navbar__list">
-																<li class="navbar__list__item navbar__list__item--active"><a href="/">Главная</a></li>
-																<li class="navbar__list__item"><a href="/petition">Обращения</a></li>
-																<li class="navbar__list__item"><a href="/result">Результаты</a></li>
-																<li class="navbar__list__item"><a href="/rating">Рейтинги</a></li>
-																<li class="navbar__list__item"><a href="/news">Новости</a></li>
-														</ul>
-												</div>
-										</div>
-										<div class="col-lg-3">
-												<div class="main-navbar__person justify-e">
 
-
-
-													{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-														<p style="width: 200px">Email: {{ app.user.email }}</p>
-														<a
-																href="/logout"
-																class="person__btn person__btn--active"
-
-														>Выйти</a>
-
-													{% else %}
-														<a
-																href="#exampleModal"
-																class="person__btn person__btn--active"
-																data-toggle="modal"
-																data-target="#exampleModal"
-														>Зарегистрироваться</a>
-														<a href="/login" class="person__btn">Войти</a>
-													{% endif %}
-														
-												</div>
-										</div>
-										{# <div class="col-lg-3">
-												<form class="navbar__form">
-														<input type="search" name="search" class="navbar-search__input" placeholder="Искать обращение, жалобу, группу">
-														<button class="navbar-search__btn"></button>
-												</form>
-										</div>
-										<div class="col-lg-2">
-												<div class="navbar__person">
-														<img src="./img/person.png" alt="Фотография" class="navbar__person__img">
-														<a href="#" class="navbar__person__name">Илья Кондрашев</a>
-												</div> #}
-{#										</div>#}
-								</div>
-		
-						</navbar>
-					</div>
-	    </div>
-	</header>
+	{% include 'header.html.twig' %}
 
 	{%   include "registration.html.twig" %}
 
@@ -131,7 +51,7 @@
 				<div class="col-xl-3">
 					<div class="hero-right">
 						<div class="hero__btn">
-							<a href="#" class="btn custom-btn custom-btn--danger">Сообщить о проблеме</a>
+							<a href="#" class="btn custom-btn custom-btn--danger">Личное обращение</a>
 						</div>
 						<div class="hero__btn">
 							<a href="#" class="btn custom-btn custom-btn--primary">Коллективное обращение</a>
@@ -154,36 +74,36 @@
 					<div class="row">
 						<div class="galery__top">
 							<div class="image__wrapper">
-								<img src="img/projects/01.png" alt="Project">
+								<img src={{ asset("/img/projects/01.png") }} alt="Project">
 							</div>
 							<div class="image__wrapper">
-								<img src="img/projects/02.png" alt="Project">
+								<img src={{ asset("/img/projects/02.jpg") }} alt="Project">
 							</div>
 							<div class="image__wrapper">
-								<img src="img/projects/03.png" alt="Project">
+								<img src={{ asset("/img/projects/03.png") }} alt="Project">
 							</div>
 							<div class="image__wrapper">
-								<img src="img/projects/04.png" alt="Project">
+								<img src={{ asset("/img/projects/04.jpg") }} alt="Project">
 							</div>
 							<div class="image__wrapper">
-								<img src="img/projects/05.png" alt="Project">
+								<img src={{ asset("/img/projects/05.png") }} alt="Project">
 							</div>
 						</div>
 						<div class="galery__bottom">
 							<div class="image__wrapper">
-								<img src="img/projects/06.png" alt="Project">
+								<img src={{ asset("/img/projects/06.png") }} alt="Project">
 							</div>
 							<div class="image__wrapper">
-								<img src="img/projects/07.png" alt="Project">
+								<img src={{ asset("/img/projects/07.jpg") }} alt="Project">
 							</div>
 							<div class="image__wrapper">
-								<img src="img/projects/08.png" alt="Project">
+								<img src={{ asset("/img/projects/08.jpg") }} alt="Project">
 							</div>
 							<div class="image__wrapper">
-								<img src="img/projects/09.png" alt="Project">
+								<img src={{ asset("/img/projects/09.png") }} alt="Project">
 							</div>
 							<div class="image__wrapper">
-								<img src="img/projects/10.png" alt="Project">
+								<img src={{ asset("/img/projects/10.png") }} alt="Project">
 							</div>
 						</div>
 					</div>

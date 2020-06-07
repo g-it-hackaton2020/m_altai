@@ -60,7 +60,12 @@
 
 .vote__info {
   display: flex;
-  justify-content: space-between;
+}
+.vote__info__item {
+  margin-right: 40px;
+}
+.vote__info__item:last-child {
+  margin-right: 0;
 }
 .vote__info__title {
   font-family: Montserrat-medium;
@@ -75,6 +80,11 @@
 
 .vote__info__value {
   font-size: 16px;
+}
+@media screen and (max-width: 1140px) {
+  .vote__info__value {
+    font-size: 14px;
+  }
 }
 
 .vote__files {
