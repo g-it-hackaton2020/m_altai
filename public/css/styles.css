@@ -171,3 +171,7 @@ button.close {
   background-repeat: no-repeat;
   background-position: 37px center;
 }
+
+.d-flex {
+  justify-content: space-evenly;
+}

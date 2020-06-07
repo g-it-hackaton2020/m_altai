@@ -110,6 +110,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 192px;
 }
 
 .navbar__person__img {
