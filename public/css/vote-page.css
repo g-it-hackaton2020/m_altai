@@ -88,6 +88,7 @@
 
 .vote__files__list {
   display: flex;
+  overflow: hidden;
 }
 
 .vote__files__img {
@@ -249,6 +250,11 @@ input:checked + .slider:before {
   display: flex;
 }
 
+.vote__comment__leave__title {
+  font-family: Montserrat-semibold;
+  font-size: 27px;
+}
+
 .likes,
 .dislike {
   display: flex;
@@ -272,7 +278,22 @@ input:checked + .slider:before {
   justify-content: space-between;
 }
 
-.vote__view__status p {
+
+.vote__view__status__right {
   font-family: Montserrat-semibold;
   font-size: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 340px;
+  width: 100%;
+}
+
+
+.vote__view__status__right a {
+  display: flex;
+  color: #6A6A6A;
+}
+
+.vote__view__status__right p {
+  margin-bottom: 0;
 }
