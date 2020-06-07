@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Montserrat-medium; /* Имя шрифта */
+  src: url(../../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-bold; /* Имя шрифта */
+  src: url(../../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: Montserrat-regular; /* Имя шрифта */
+  src: url(../../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Montserrat-semibold; /* Имя шрифта */
+  src: url(../../fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: Montserrat-light; /* Имя шрифта */
+  src: url(../../fonts/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: Montserrat-black; /* Имя шрифта */
+  src: url(../../fonts/Montserrat-Black.ttf);
+}

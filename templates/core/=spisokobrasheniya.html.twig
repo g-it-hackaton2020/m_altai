@@ -1,0 +1,240 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Портал сообществ
+{% endblock %}
+
+{% block body %}
+
+	<header class="page-header">
+		<div class="container-fluid d-flex">
+			<div class="header__logo">
+				<a href="#" class="main-navbar__logo">
+					<img src="./img/logo.svg" alt="логотип">
+				</a>
+			</div>
+			<button class="burger__trigger">
+				<span></span>
+			</button>
+			<div class="mobile__menu">
+				<ul class="mobile-navbar__list">
+					<li class="mobile-navbar__list__item">
+						<a href="#">Главная</a>
+					</li>
+					<li class="mobile-navbar__list__item">
+						<a href="#">Обращения</a>
+					</li>
+					<li class="mobile-navbar__list__item">
+						<a href="#">Результаты</a>
+					</li>
+					<li class="mobile-navbar__list__item">
+						<a href="#">Рейтинги</a>
+					</li>
+					<li class="mobile-navbar__list__item">
+						<a href="#">Новости</a>
+					</li>
+				</ul>
+				<ul class="mobile-person__list">
+					<li class="mobile-person__list__item">
+						<a href="#">Зарегистрироваться</a>
+					</li>
+					<li class="mobile-person__list__item">
+						<a href="#">Войти</a>
+					</li>
+				</ul>
+			</div>
+			<div class="navbar__wrapper">
+				<navbar class="main-navbar">
+					<div class="row justify-b menu-reverse">
+						<div class="col-xl-5">
+							<div class="main-navbar__left">
+								<ul class="main-navbar__list">
+									<li class="navbar__list__item navbar__list__item--active">
+										<a href="#">Главная</a>
+									</li>
+									<li class="navbar__list__item">
+										<a href="#">Обращения</a>
+									</li>
+									<li class="navbar__list__item">
+										<a href="#">Результаты</a>
+									</li>
+									<li class="navbar__list__item">
+										<a href="#">Рейтинги</a>
+									</li>
+									<li class="navbar__list__item">
+										<a href="#">Новости</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-xl-3 offset-1">
+							<form class="navbar__form">
+								<input type="search" name="search" class="navbar-search__input" placeholder="Искать обращение, жалобу, группу">
+								<button class="navbar-search__btn"></button>
+							</form>
+						</div>
+						<div class="col-xl-2">
+							<div class="navbar__person">
+								<img src="./img/person.png" alt="Фотография" class="navbar__person__img">
+								<a href="#" class="navbar__person__name">Илья Кондрашев</a>
+							</div>
+						</div>
+					</div>
+
+				</navbar>
+			</div>
+		</div>
+	</header>
+
+	<main class="page-main">
+		<sidebar class="main__sidebar">
+			<div class="sidebar__nav">
+				<ul class="sidebar__nav__list">
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-edit"></i>Личные обращения</a>
+					</li>
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-appeal"></i>Обращения</a>
+					</li>
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-user-check"></i>Голосования</a>
+					</li>
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-users-grey"></i>Участники</a>
+					</li>
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-panel"></i>Панель</a>
+					</li>
+				</ul>
+			</div>
+		</sidebar>
+
+			<div class="content__wrapper">
+				<section class="main-content">
+					<div class="main-content__header">
+						<h2>Список обращений группы</h2>
+						<div class="main-content__header__filter">
+							<form>
+								<p>Фильтр:</p>
+								<label class="main-content__label">Жалобы
+									<input type="checkbox" checked="checked">
+									<span class="checkmark"></span>
+								</label>
+								<label class="main-content__label">Инициативы
+									<input type="checkbox" checked="checked">
+									<span class="checkmark"></span>
+								</label>
+							</form>
+
+							<a href="#" class="main-content__header__link">Составить обращение</a>
+						</div>
+					</div>
+
+					<div class="main-content__panel">
+						<div class="appeal__list">
+							<div class="appeal__wrapper">
+								<div class="appeal__header">
+									<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+									<div class="appeal__header__share">
+										<a href="#">
+											<i class="icon-logout"></i>Поделиться</a>
+										<span class="appeal__header__date">24.04.20</span>
+									</div>
+								</div>
+								<div class="appeal__content">
+									<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+										подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+								</div>
+							</div>
+							<div class="appeal__wrapper">
+								<div class="appeal__header">
+									<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+									<div class="appeal__header__share">
+										<a href="#">
+											<i class="icon-logout"></i>Поделиться</a>
+										<span class="appeal__header__date">24.04.20</span>
+									</div>
+								</div>
+								<div class="appeal__content">
+									<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+										подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+								</div>
+							</div>
+							<div class="appeal__wrapper">
+								<div class="appeal__header">
+									<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+									<div class="appeal__header__share">
+										<a href="#">
+											<i class="icon-logout"></i>Поделиться</a>
+										<span class="appeal__header__date">24.04.20</span>
+									</div>
+								</div>
+								<div class="appeal__content">
+									<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+										подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+								</div>
+							</div>
+							<div class="appeal__wrapper">
+								<div class="appeal__header">
+									<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+									<div class="appeal__header__share">
+										<a href="#">
+											<i class="icon-logout"></i>Поделиться</a>
+										<span class="appeal__header__date">24.04.20</span>
+									</div>
+								</div>
+								<div class="appeal__content">
+									<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+										подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+								</div>
+							</div>
+							<div class="appeal__wrapper">
+								<div class="appeal__header">
+									<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+									<div class="appeal__header__share">
+										<a href="#">
+											<i class="icon-logout"></i>Поделиться</a>
+										<span class="appeal__header__date">24.04.20</span>
+									</div>
+								</div>
+								<div class="appeal__content">
+									<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+										подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+								</div>
+							</div>
+							<div class="appeal__wrapper">
+								<div class="appeal__header">
+									<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+									<div class="appeal__header__share">
+										<a href="#">
+											<i class="icon-logout"></i>Поделиться</a>
+										<span class="appeal__header__date">24.04.20</span>
+									</div>
+								</div>
+								<div class="appeal__content">
+									<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+										подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<footer class="page-footer">
+					<div class="container">
+						<div class="footer__wrapper">
+							<div class="footer__content">
+								<img src="img/altay.png" alt="Герб Алтая">
+								<p>Интернет-портал государственных услуг, 2020 г.</p>
+								<img src="img/russia.png" alt="Герб России">
+							</div>
+						</div>
+					</div>
+				</footer>
+		</div>
+	</main>
+{% endblock %}

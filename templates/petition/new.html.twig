@@ -1,0 +1,150 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Портал сообществ
+{% endblock %}
+
+{% block body %}
+
+	{% include 'header.html.twig' %}
+
+	<main class="page-main">
+		<sidebar class="main__sidebar">
+			<div class="sidebar__nav">
+				<ul class="sidebar__nav__list">
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-edit"></i>Личные обращения</a>
+					</li>
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-appeal"></i>Обращения</a>
+					</li>
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-user-check"></i>Голосования</a>
+					</li>
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-users-grey"></i>Участники</a>
+					</li>
+					<li class="sidebar__nav__list__item">
+						<a href="#">
+							<i class="icon-panel"></i>Панель</a>
+					</li>
+				</ul>
+			</div>
+		</sidebar>
+
+		<div class="content__wrapper">
+				<section class="main-content">
+					<div class="main-content__header">
+						<h2>Новое обращение</h2>
+            <a href="#" class="main-content__header__link">Составить обращение</a>
+					</div>
+
+					<div class="main-content__panel">
+						<div class="appeal__form">
+							<h3 class="appeal__form__title">Обращение</h3>
+
+							<p class="appeal__agreement">
+								<label class="main-content__label">Я соглашаюсь
+									<input type="checkbox" checked="checked" name="agreement">
+									<span class="checkmark"></span>
+								</label>
+								<a href="#">с порядком приема и подачи обращений</a>
+							</p>
+
+							<form class="appeal__submit">
+								<div class="form-row">
+									<div class="form-group col-xl-3 mr-25">
+										<p class="input__title">Адресат</p>
+										<select id="inputState" class="form-control">
+											<option selected>И.И.Иванов</option>
+											<option>и др.</option>
+										</select>
+									</div>
+									<div class="form-group col-xl-3 mr-80">
+										<p class="input__title">Ответственный</p>
+										<select id="inputState" class="form-control">
+											<option selected>И.И.Иванов</option>
+											<option>и др.</option>
+										</select>
+									</div>
+									<div class="form-group col-xl-3">
+										<p class="input__title">Форма обращения</p>
+										<div class="appeal__radio-buttons">
+											<p>
+												<input
+													class="form-check-input"
+													type="radio"
+													name="gridRadios"
+													id="gridRadios1"
+													value="option1" checked>
+												<label class="form-check-label" for="gridRadios1">
+													Жалоба
+												</label>
+											</p>
+											<p>
+												<input
+													class="form-check-input"
+													type="radio"
+													name="gridRadios"
+													id="gridRadios1"
+													value="option1" checked>
+												<label class="form-check-label" for="gridRadios1">
+													Инициатива
+												</label>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-group col-xl-12">
+										<p class="input__title">Форма обращения</p>
+										<textarea class="form-control appeal__textarea" id="exampleFormControlTextarea1" rows="3" placeholder="Введите текст"></textarea>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-group col-xl-6">
+										<p class="input__title">Приложить файлы</p>
+										<div class="custom-file">
+											<input type="file" class="custom-file-input" id="customFile">
+											<label class="custom-file-label" for="customFile">Выбрать файлы</label>
+										</div>
+										<p class="appeal__submit__promt">Вы можете прикрепить к сообщению документы и фото.</p>
+										
+										<label class="main-content__label appeal__public">Сделать обращения публичным
+											<input type="checkbox" checked="checked" name="public">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-group col-xl-12">
+										<p class="input__title">Теги</p>
+										<input class="appeal__form__tags" type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput"/>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-xl-12">
+										<button class="btn">Отправить</button>
+										<button class="btn">Сохранить</button>
+										<button class="btn">Голосовать</button>
+									</div>
+								</div>
+							</form>
+							
+						</div>
+					</div>
+				</section>
+		</div>
+
+
+	</main>
+
+	{% include "footer.html.twig" %}
+
+{% endblock %}

@@ -1,0 +1,230 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Портал сообществ
+{% endblock %}
+
+{% block body %}
+	{# <style>
+	    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+	    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+	</style> #}
+	<header class="page-header">
+	    <div class="container d-flex">
+					<div class="header__logo">
+							<a href="#" class="main-navbar__logo">
+									<img src="./img/logo.svg" alt="логотип">
+							</a>
+					</div>
+					<button class="burger__trigger"><span></span></button>
+					<div class="mobile__menu">
+						<ul class="mobile-navbar__list">
+							<li class="mobile-navbar__list__item"><a href="/">Главная</a></li>
+							<li class="mobile-navbar__list__item"><a href="/petition">Обращения</a></li>
+							<li class="mobile-navbar__list__item"><a href="/result">Результаты</a></li>
+							<li class="mobile-navbar__list__item"><a href="/rating">Рейтинги</a></li>
+							<li class="mobile-navbar__list__item"><a href="/new">Новости</a></li>
+						</ul>
+						<ul class="mobile-person__list">
+							<li class="mobile-person__list__item"><a href="#">Зарегистрироваться</a></li>
+							<li class="mobile-person__list__item"><a href="#">Войти</a></li>
+						</ul>
+					</div>
+					<div class="navbar__wrapper">
+						<navbar class="main-navbar">
+								<div class="row justify-b menu-reverse">
+										<div class="col-lg-5">
+												<div class="main-navbar__left">
+														<ul class="main-navbar__list">
+																<li class="navbar__list__item navbar__list__item--active"><a href="/">Главная</a></li>
+																<li class="navbar__list__item"><a href="/petition">Обращения</a></li>
+																<li class="navbar__list__item"><a href="/result">Результаты</a></li>
+																<li class="navbar__list__item"><a href="/rating">Рейтинги</a></li>
+																<li class="navbar__list__item"><a href="/news">Новости</a></li>
+														</ul>
+												</div>
+										</div>
+										<div class="col-lg-3">
+												<div class="main-navbar__person justify-e">
+														<a
+															href="#exampleModal"
+															class="person__btn person__btn--active"
+															data-toggle="modal"
+															data-target="#exampleModal"
+															>Зарегистрироваться</a>
+														<a href="/" class="person__btn">Войти</a>
+												</div>
+										</div>
+										{# <div class="col-lg-3">
+												<form class="navbar__form">
+														<input type="search" name="search" class="navbar-search__input" placeholder="Искать обращение, жалобу, группу">
+														<button class="navbar-search__btn"></button>
+												</form>
+										</div>
+										<div class="col-lg-2">
+												<div class="navbar__person">
+														<img src="./img/person.png" alt="Фотография" class="navbar__person__img">
+														<a href="#" class="navbar__person__name">Илья Кондрашев</a>
+												</div> #}
+										</div>
+								</div>
+		
+						</navbar>
+					</div>
+	    </div>
+	</header>
+
+	<div class="hero">
+		<div class="container ">
+			<div class="row justify-content-between">
+				<div class="col-xl-7">
+					<div class="hero-left">
+						<div class="search__form">
+							<form method="post" accept-charset="UTF-8">
+								<input type="search" name="search" class="search__input" placeholder="Искать обращение, жалобу, группу">
+								<button class="search__btn"></button>
+							</form>
+						</div>
+						<div class="prides__wrapper">
+							<div class="prides__item">
+								<div class="prides__info">
+                                    <i class="icon-user"></i>
+									<p>Пользователей</p>
+								</div>
+                                <span class="prides__num">106 375</span>
+							</div>
+							<div class="prides__item">
+								<div class="prides__info">
+                                    <i class="icon-users"></i>
+									<p>Зарегистрировано групп</p>
+								</div>
+                                <span class="prides__num">1 406</span>
+							</div>
+							<div class="prides__item prides__item--success">
+								<div class="prides__info">
+                                    <i class="icon-check"></i>
+									<p>Решено проблем</p>
+								</div>
+                                <span class="prides__num">122 463</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-1 d-none d-lg-block d-xl-block">
+					<div class="hero-line"></div>
+				</div>
+				<div class="col-xl-3">
+					<div class="hero-right">
+						<div class="hero__btn">
+							<a href="#" class="btn custom-btn custom-btn--danger">Сообщить о проблеме</a>
+						</div>
+						<div class="hero__btn">
+							<a href="#" class="btn custom-btn custom-btn--primary">Коллективное обращение</a>
+						</div>
+						<div class="hero__btn">
+							<a href="#" class="btn custom-btn">Создать группу</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="projects">
+		<div class="container">
+			<h2 class="section__header">
+					<a href="#">Результаты работы <i class="icon-right"></i></a>
+			</h2>
+			<div class="galery-container">
+					<div class="row">
+						<div class="galery__top">
+							<div class="image__wrapper">
+								<img src="img/projects/01.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/02.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/03.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/04.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/05.png" alt="Project">
+							</div>
+						</div>
+						<div class="galery__bottom">
+							<div class="image__wrapper">
+								<img src="img/projects/06.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/07.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/08.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/09.png" alt="Project">
+							</div>
+							<div class="image__wrapper">
+								<img src="img/projects/10.png" alt="Project">
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="appeals">
+		<div class="container">
+			<h2 class="section__header">
+					<a href="#">Список обращений <i class="icon-right"></i></a>
+			</h2>
+
+			<div class="appeal__list">
+				<div class="appeal__wrapper">
+					<div class="appeal__header">
+						<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+						<div class="appeal__header__share">
+							<a href="#"><i class="icon-logout"></i>Поделиться</a>
+							<span class="appeal__header__date">24.04.20</span>
+						</div>
+					</div>
+					<div class="appeal__content">
+						<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+					</div>
+				</div>
+				<div class="appeal__wrapper">
+					<div class="appeal__header">
+						<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+						<div class="appeal__header__share">
+							<a href="#"><i class="icon-logout"></i>Поделиться</a>
+							<span class="appeal__header__date">24.04.20</span>
+						</div>
+					</div>
+					<div class="appeal__content">
+						<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+					</div>
+				</div>
+				<div class="appeal__wrapper">
+					<div class="appeal__header">
+						<h3>Инициатива 2020/04-000301 | Группа id 436</h3>
+						<div class="appeal__header__share">
+							<a href="#"><i class="icon-logout"></i>Поделиться</a>
+							<span class="appeal__header__date">24.04.20</span>
+						</div>
+					</div>
+					<div class="appeal__content">
+						<p>С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации 
+подготовят ответ в течение 30 календарных дней со дня регистрации.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{% include "footer.html.twig" %}
+
+{% endblock %}

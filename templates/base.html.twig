@@ -8,19 +8,44 @@
 
         {% block stylesheets %}
 
-            <link rel="stylesheet" href={{ asset('libs/@fortawesome/fontawesome-free/css/all.css') }}>
+            {# <link rel="stylesheet" href={{ asset('css/normalize.css') }}> #}
+            <link rel="stylesheet" href={{ asset('libs/@fontawesome/fontawesome-free/css/all.css') }}>
             <link rel="stylesheet" href={{ asset('libs/bootstrap/dist/css/bootstrap.css') }}>
-            <link rel="stylesheet" href={{ asset('libs/toastr/build/toastr.min.css') }}
+            <link rel="stylesheet" href={{ asset('libs/toastr/build/toastr.min.css') }}>
+            <link rel="stylesheet" href={{ asset('libs/swiper/css/swiper.min.css') }}>
+            <link rel="stylesheet" href={{ asset('css/styles.css') }}>
         {% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         {% block body %}{% endblock %}
-
+        
         {% block javascripts %}
             <script type="application/javascript" src={{ asset('libs/toastr/build/toastr.min.js') }}></script>
-            <script type="application/javascript" src={{ asset('libs/bootstrap/dist/js/bootstrap.js') }}></script>
             <script type="application/javascript" src={{ asset('libs/jquery/dist/jquery.min.js') }}></script>
-           
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
+            <script type="application/javascript" src={{ asset('libs/bootstrap/dist/js/bootstrap.js') }}></script>
+            <script type="application/javascript" src={{ asset('libs/swiper/js/swiper.min.js') }}></script>
+            <script type="application/javascript" src={{ asset('app/scripts.js') }}></script>
+            <script>
+                // let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+                // let slidesPerView = width < 570 ? 'auto' : 10;
+                // const swiper = {};
+                // if(width < 570) {
+                //     swiper = new Swiper('.swiper-container', {
+                //         slidesPerView: 'auto',
+                //         centeredSlides: true,
+                //         spaceBetween: 30,
+                //     });
+                // } else {
+                //     swiper = new Swiper('.swiper-container', {
+                //         slidesPerView: 10,
+                //         centeredSlides: true,
+                //         noSwiping: false,
+                //         spaceBetween: 30,
+                //     });
+                // 
+            </script>
         {% endblock %}
     </body>
 </html>

@@ -1,0 +1,190 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+  {% include 'header.html.twig' %}
+
+    <div class="page-main">
+      {% include 'sidebar.html.twig' %}
+
+      <div class="content__wrapper">
+        <section class="main-content">
+          <div class="main-content__header">
+            <h2>Голосования</h2>
+            <a href="#" class="main-content__header__link">Провести голосование</a>
+          </div>
+
+          <div class="main-content__panel">
+            <div class="appeal__form">
+              <div class="vote__view__status">
+                <h3 class="appeal__form__title">Голосование инициативы 2020/04-000346 <span>Новое</span></h3>
+                <p>Сейчас идет</p>
+              </div>
+
+              <p class="appeal__agreement">
+                <label class="main-content__label">Я соглашаюсь
+                  <input type="checkbox" checked="checked" name="agreement">
+                  <span class="checkmark"></span>
+                </label>
+                <a href="#">с порядком приема и подачи обращений</a>
+              </p>
+
+              <p class="vote__paragraph">
+                С помощью данного сервиса Вы можете направить официальное обращение в Администрацию города Екатеринбурга. Сотрудники Администрации подготовят ответ в течение 30 календарных дней со дня регистрации.
+              </p>
+              <div class="vote__info">
+                <div class="vote__info__item">
+                  <p class="vote__info__title">Администрация</p>
+                  <p class="vote__info__value">Шаров Станислав Олегович - Заместитель начальника управления</p>
+                </div>
+                <div class="vote__info__item">
+                  <p class="vote__info__title">Телефон</p>
+                  <p class="vote__info__value">64-53-47</p>
+                </div>
+                <div class="vote__info__item">
+                  <p class="vote__info__title">Почта</p>
+                  <p class="vote__info__value">hoz@gd.barnaul-adm.ru</p>
+                </div>
+              </div>
+
+              <div class="vote__files">
+                <p class="vote__info__title">Прикрепленные файлы</p>
+                <div class="vote__files__list">
+                  <img src={{ asset("img/choosen3.png") }} alt="" class="vote__files__img">
+                  <img src={{ asset("img/choosen2.png") }} alt="" class="vote__files__img">
+                  <img src={{ asset("img/choosen1.png") }} alt="" class="vote__files__img">
+                </div>
+              </div>
+
+              <div class="vote__yourvote">
+                <p class="vote__info__title">Ваш голос</p>
+                <div class="vote__radiobtns">
+                  <p>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="in"
+                      id="gridRadios1"
+                      value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                      За
+                    </label>
+                  </p>
+                  <p>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="out"
+                      id="gridRadios1"
+                      value="option1" >
+                    <label class="form-check-label" for="gridRadios1">
+                      Против
+                    </label>
+                  </p>
+                </div>
+              </div>
+
+              <div class="appeal__line"></div>
+								<div class="form-row mt-30">
+									<div class="form-group mb-0 col-xl-12">
+										<button class="btn appeal__btn">Отправить</button>
+									</div>
+								</div>
+            </div>
+          </div>
+
+          <div class="vote__comments">
+            <h2 class="vote__comments__title">Коментарии</h2>
+            <div class="switcher">
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+              <p>Получать комментарии к этому обращению по электронной почте.</p>
+            </div>
+
+            <div class="vote__comment__list">
+              <div class="vote__comment__item">
+                <div class="vote__comment__header">
+                  <img src="../../img/person2.png" alt="Person">
+                  <div>
+                    <p class="vote__comment__name">Глеб</p>
+                    <p class="vote__comment__time">1 день назад</p>
+                  </div>
+                </div>
+                <div class="vote__comment__content">
+                  <p class="vote__comment__paragraph">Как будет проходить процесс?</p>
+                </div>
+                <div class="vote__comment__footer">
+                  <div class="likes">
+                    <i class="icon-like"></i>
+                    <span class="likes__num">6</span>
+                  </div>
+                  <div class="dislike">
+                    <i class="icon-dislike"></i>
+                    <span class="dislikes__num"></span>
+                  </div>
+                  <a href="#">Ответить</a>
+                </div>
+              </div>
+              <div class="vote__comment__item vote__comment__item--replied">
+                <div class="vote__comment__header">
+                  <img src="../../img/person.png" alt="Person">
+                  <div>
+                    <p class="vote__comment__name">Илья</p>
+                    <p class="vote__comment__time">20:38</p>
+                  </div>
+                </div>
+                <div class="vote__comment__content">
+                  <p class="vote__comment__paragraph">Процесс будет проходить так</p>
+                </div>
+                <div class="vote__comment__footer">
+                  <div class="likes">
+                    <i class="icon-like"></i>
+                    <span class="likes__num">2</span>
+                  </div>
+                  <div class="dislike">
+                    <i class="icon-dislike"></i>
+                    <span class="dislikes__num"></span>
+                  </div>
+                  <a href="#">Ответить</a>
+                </div>
+              </div>
+              <div class="vote__comment__item">
+                <div class="vote__comment__header">
+                  <img src="../../img/person2.png" alt="Person">
+                  <div>
+                    <p class="vote__comment__name">Глеб</p>
+                    <p class="vote__comment__time">6 дней назад</p>
+                  </div>
+                </div>
+                <div class="vote__comment__content">
+                  <p class="vote__comment__paragraph">Как будет проходить процесс?</p>
+                </div>
+                <div class="vote__comment__footer">
+                  <div class="likes">
+                    <i class="icon-like"></i>
+                    <span class="likes__num">2</span>
+                  </div>
+                  <div class="dislike">
+                    <i class="icon-dislike"></i>
+                    <span class="dislikes__num"></span>
+                  </div>
+                  <a href="#">Ответить</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="vote__comment__leave">
+              <h3 class="vote__comment__leave__title">Оставить комментарии</h3>
+              <textarea class="form-control appeal__textarea leave__comment" id="exampleFormControlTextarea1" rows="3" placeholder="Введите текст"></textarea>
+              <button class="btn appeal__btn">Отправить</button>
+              
+            </div>
+          </div>
+        </section>
+      {% include "footer.html.twig" %}
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,103 @@
+.icon-user,
+.icon-users,
+.icon-check {
+  display: block;
+  width: 35px;
+  height: 18px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+}
+
+.icon-user {
+  background-image: url("../../img/icons/user.png");
+}
+.icon-users {
+  background-image: url("../../img/icons/users.png");
+  
+}
+.icon-check {
+  background-image: url("../../img/icons/check.png");
+}
+
+.icon-right {
+  display: block;
+  width: 10px;
+  height: 16px;
+
+  background-image: url("../../img/icons/right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-logout {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  background-image: url("../../img/icons/log-out.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-edit,
+.icon-appeal,
+.icon-user-check,
+.icon-users-grey,
+.icon-panel {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-edit {
+  background-image: url("../../img/icons/edit-form.png");
+}
+.icon-appeal {
+  background-image: url("../../img/icons/copy.png");
+}
+.icon-user-check {
+  background-image: url("../../img/icons/user-check.png");
+}
+.icon-users-grey {
+  background-image: url("../../img/icons/users-grey.png");
+}
+.icon-panel {
+  background-image: url("../../img/icons/panel.png");
+}
+
+.icon-like,
+.icon-dislike {
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-like {
+  background-image: url("../../img/icons/like.png");
+}
+
+.icon-dislike {
+  background-image: url("../../img/icons/dislike.png");
+}
+
+.icon-save {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  background-image: url("../../img/icons/bookmark.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}

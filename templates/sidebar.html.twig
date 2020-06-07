@@ -1,0 +1,29 @@
+{% block sidebar %}
+
+<sidebar class="main__sidebar">
+	<div class="sidebar__nav">
+		<ul class="sidebar__nav__list">
+			<li class="sidebar__nav__list__item">
+				<a href="#">
+					<i class="icon-edit"></i>Личные обращения</a>
+			</li>
+			<li class="sidebar__nav__list__item">
+				<a href={{ asset("/petition/") }}>
+					<i class="icon-appeal"></i>Обращения</a>
+			</li>
+			<li class="sidebar__nav__list__item">
+				<a href="#">
+					<i class="icon-user-check"></i>Голосования</a>
+			</li>
+			<li class="sidebar__nav__list__item">
+				<a href="#">
+					<i class="icon-users-grey"></i>Участники</a>
+			</li>
+			<li class="sidebar__nav__list__item">
+				<a href="#">
+					<i class="icon-panel"></i>Панель</a>
+			</li>
+		</ul>
+	</div>
+</sidebar>
+{% endblock %}

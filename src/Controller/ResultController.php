@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class ResultController
  * @package App\Controller
- * @Route("/Result")
+ * @Route("/result")
  */
 class ResultController extends AbstractController
 {
